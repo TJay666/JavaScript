@@ -1,5 +1,6 @@
 function getBackgroundImage(hours24) {
     // 將24小時制時間對應到對應的背景圖片
+    // hours24 is an integer between 0 and 23 which represents the current hour in 24-hour format
     if (hours24 >= 4 && hours24 <= 8) {
         return '101morning.png';  // 04:00 AM - 08:00 AM
     } else if (hours24 > 8 && hours24 <= 16) {
@@ -13,6 +14,7 @@ function getBackgroundImage(hours24) {
     }
 }
 
+// 更新背景圖片
 function updateBackground(hours24) {
     const newImage = getBackgroundImage(hours24);
     const currentBackground = document.querySelector('.background.current');
